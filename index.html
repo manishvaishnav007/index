@@ -1,169 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manish Vaishnav - Personal Website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manish Vaishnav | Director of Finance & Administration</title>
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f172a;
-      color: #e2e8f0;
-    }
-    header {
-      background-color: #1e293b;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
-    nav a {
-      color: #cbd5e1;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #38bdf8;
-      text-decoration: underline;
-    }
-    main {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    footer {
-      background-color: #1e293b;
-      color: #cbd5e1;
-      text-align: center;
-      padding: 1rem;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      font-size: 0.9rem;
-    }
-    .section {
-      margin-bottom: 3rem;
-      padding: 2rem;
-      background-color: #1e293b;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-    h2 {
-      color: #38bdf8;
-    }
-    a {
-      color: #60a5fa;
-    }
-    a:hover {
-      color: #3b82f6;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 600px;
-      border-radius: 6px;
-    }
-    .download-link {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #2563eb;
-      color: #fff;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .download-link:hover {
-      background-color: #1d4ed8;
-    }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Manish Vaishnav</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#resume">Resume</a>
-      <a href="#blog">Blog</a>
-      <a href="#ifrs">IFRS AI Agent</a>
-      <a href="#resources">Resources</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Navbar -->
+  <header class="fixed w-full z-30 bg-transparent transition-colors duration-300" id="header">
+    <div class="container mx-auto px-4 flex items-center justify-between py-4">
+      <a href="#home" class="text-xl font-bold text-white md:text-gray-900">Manish Vaishnav</a>
+      <nav class="hidden md:flex space-x-6 text-white md:text-gray-800">
+        <a href="#about" class="hover:text-yellow-400 transition">About</a>
+        <a href="#resume" class="hover:text-yellow-400 transition">Resume</a>
+        <a href="#blog" class="hover:text-yellow-400 transition">Blog</a>
+        <a href="#agent" class="hover:text-yellow-400 transition">Agent</a>
+        <a href="#resources" class="hover:text-yellow-400 transition">Resources</a>
+        <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+      </nav>
+      <button class="md:hidden text-white focus:outline-none" id="menu-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div class="md:hidden bg-white text-gray-800 hidden" id="mobile-menu">
+      <a href="#about" class="block px-4 py-3 hover:bg-gray-100">About</a>
+      <a href="#resume" class="block px-4 py-3 hover:bg-gray-100">Resume</a>
+      <a href="#blog" class="block px-4 py-3 hover:bg-gray-100">Blog</a>
+      <a href="#agent" class="block px-4 py-3 hover:bg-gray-100">Agent</a>
+      <a href="#resources" class="block px-4 py-3 hover:bg-gray-100">Resources</a>
+      <a href="#contact" class="block px-4 py-3 hover:bg-gray-100">Contact</a>
+    </div>
   </header>
-  <main>
-    <section id="home" class="section">
-      <h2>Welcome</h2>
-      <p>This is the professional website of Manish Vaishnav. Stay connected to explore insights, resources, and innovations in finance, IFRS, and leadership.</p>
-    </section>
 
-    <section id="about" class="section">
-  <h2>About Me</h2>
-  <p>Hello, and thank you for visiting my website.</p>
-  <p>I’m Manish Vaishnav, a finance professional with over two decades of experience in managing financial operations, leading teams, and driving strategic initiatives across diverse industries. Currently serving as Director of Finance & Administration at a technology-driven company in Singapore, I have built my career on strong financial acumen, hands-on leadership, and a deep understanding of international financial reporting standards (IFRS).</p>
-  <p>Beyond the spreadsheets and boardrooms, I’m also a family man, a lifelong learner, and someone who strongly believes in living by values.</p>
-  <p>Integrity and honesty are the core principles I live by—even when it's inconvenient. I believe in helping others whenever I can, practicing compassion in all interactions, and staying grounded no matter how busy life gets. These values not only guide my professional conduct but also shape how I raise my daughter, how I relate to my colleagues, and how I contribute to my community.</p>
-  <p>Problem-solving and adaptability are central to my approach at work. I recognize we don't operate in an ideal or static world—our environment is dynamic and constantly evolving. Solutions that were effective yesterday might not address today's challenges. My strength lies in my ability to adapt quickly and respond thoughtfully to changing circumstances. I believe in approaching situations with the right mindset—making the best use of available resources to achieve practical and meaningful outcomes. </p>
-  <p>Learning is a continuous journey for me. I love reading as it helps me learn and grow every day. Whether it's a timeless classic or a new perspective from a modern author, books are one of my greatest teachers.</p>
-  <p>I also deeply value friendship. Over the years, my close-knit group of friends have not only celebrated my wins but stood by me during difficult times. Their support has been a pillar in my personal and professional life.</p>
-  <p>I’m deeply curious about a wide range of subjects beyond finance—from <strong>spirituality, psychology, and neuroscience</strong> to <strong>technology, artificial intelligence, and data analytics</strong>. I’m fascinated by how these disciplines intersect and influence the way we live, work, and think.</p>
-  <p>This website is a small step towards sharing ideas, connecting with like-minded individuals, and giving back through the knowledge I’ve gained over the years.</p>
-  <p>Thank you for stopping by—I hope something here inspires, informs, or connects with you.</p>
-</section>
+  <!-- Hero -->
+  <section id="home" class="relative bg-gradient-to-r from-blue-800 to-teal-600 pt-24 pb-32">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+      <div class="text-white">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Manish Vaishnav</h1>
+        <p class="text-lg sm:text-xl mb-4">Director of Finance & Administration</p>
+        <p class="max-w-full">Over two decades of experience in financial operations, team leadership, and strategic initiatives across diverse industries.</p>
+      </div>
+      <div class="flex justify-center md:justify-end">
+        <div class="w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-full overflow-hidden shadow-lg">
+  <!-- Replace the src attribute with your image path -->
+  <img src="path/to/Myphoto.jpg" alt="Manish Vaishnav" class="w-full h-full object-cover">
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="resume" class="section">
-  <h2>Resume</h2>
-  <p>Download different versions of my resume tailored for various audiences and needs:</p>
+  <!-- About Me -->
+  <section id="about" class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold text-center mb-2">About Me</h2>
+    <div class="w-16 h-1 bg-yellow-500 mx-auto mb-8"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-700">
+      <div>
+        <h3 class="text-xl font-semibold mb-3">Professional Background</h3>
+        <p class="mb-3">Finance professional with over two decades of experience managing financial operations, leading teams, and driving strategic initiatives.</p>
+        <p class="mb-3">Currently Director of Finance & Administration at a technology-driven company in Singapore, with deep IFRS expertise.</p>
+        <p>Skilled in financial reporting, strategic planning, process optimization, and team development.</p>
+      </div>
+      <div class="border-t border-gray-300 pt-6 md:border-t-0 md:border-l md:pt-0 md:pl-6">
+        <h3 class="text-xl font-semibold mb-3">Values & Approach</h3>
+        <div class="mb-6">
+          <h4 class="font-semibold text-blue-800 mb-2">Core Values</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Integrity and honesty</li>
+            <li>Helping others and collaboration</li>
+            <li>Compassionate leadership</li>
+            <li>Staying grounded</li>
+          </ul>
+        </div>
+        <div class="mb-6">
+          <h4 class="font-semibold text-blue-800 mb-2">Approach</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Systematic problem-solving</li>
+            <li>Adaptability to change</li>
+            <li>Continuous learning</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-blue-800 mb-2">Interests</h4>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Reading & personal development</li>
+            <li>Friendships & networking</li>
+            <li>Spirituality & psychology</li>
+            <li>Neuroscience & AI</li>
+            <li>Data analytics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h3>📄 Executive Summary Resume</h3>
-  <p>A concise, high-level overview of experience, skills, and leadership achievements.</p>
-  <a class="download-link" href="Manish_Resume.pdf" target="_blank">Access the Executive Summaryy</a>
+  <!-- Resume -->
+  <section id="resume" class="container mx-auto px-4 py-16 bg-gray-50">
+    <h2 class="text-3xl font-semibold text-center mb-2">Resume</h2>
+    <div class="w-16 h-1 bg-yellow-500 mx-auto mb-8"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">  
+      <!-- Cards -->
+      <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition">
+        <div class="flex items-center justify-center mb-4 h-12 w-12 bg-blue-100 rounded-full mx-auto">
+          <svg class="w-6 h-6 text-blue-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Executive Summary</h3>
+        <p class="text-gray-600 mb-4">Concise overview of experience, achievements, and core competencies.</p>
+        <a href="Manish_Resume.pdf" class="inline-block px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition text-sm">View Summary</a>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition">
+        <div class="flex items-center justify-center mb-4 h-12 w-12 bg-blue-100 rounded-full mx-auto">
+          <svg class="w-6 h-6 text-blue-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a4 4 0 018 0v2M5 21h14a2 2 0 002-2v-5a2 2 0 00-2-2H5a2 2 0 00-2 2v5a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Comprehensive Resume</h3>
+        <p class="text-gray-600 mb-4">Detailed history of roles, responsibilities, and accomplishments.</p>
+        <a href="Manish_Resume_Comprehensive.pdf" class="inline-block px-4 py-2 bg-blue-800 text-white rounded-lg_hover:bg-blue-700 transition text-sm">Download PDF</a>
+      </div>
+      <div class="bg-white rounded-lg shadow p-6 text-center hover:shadow-lg transition">
+        <div class="flex items-center justify-center mb-4 h-12 w-12 bg-blue-100 rounded-full mx-auto">
+          <svg class="w-6 h-6 text-blue-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3.315 0-6 2.686-6 6v2h12v-2c0-3.314-2.685-6-6-6zM12 4a4 4 0 110 8 4 4 0 010-8z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Full Portfolio</h3>
+        <p class="text-gray-600 mb-4">Portfolio with case studies, projects, and testimonials.</p>
+        <a href="Manish_Resume_Full_Length.pdf" class="inline-block px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition text-sm">View Portfolio</a>
+      </div>
+    </div>
+  </section>
 
-  <h3>📘 Comprehensive Resume</h3>
-  <p>Detailed career history with expanded role descriptions and accomplishments.</p>
-  <a class="download-link" href="Manish_Resume_Comprehensive.pdf" target="_blank">View the Comprehensive Resume</a>
+  <!-- Blog -->
+  <section id="blog" class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold text-center mb-2">Blog</h2>
+    <div class="w-16 h-1 bg-yellow-500 mx-auto mb-8"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <article class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Reflection on Resilience</h3>
+        <p class="text-gray-600 mb-4">Insights from Harvard Business Review’s Emotional Intelligence Series on building resilience in leadership.</p>
+        <a href="/blog/reflection-resilience" class="text-blue-800 font-semibold hover:underline">Read More &rarr;</a>
+      </article>
+    </div>
+  </section>
 
-  <h3>📚 Full-Length Resume / Portfolio</h3>
-  <p>Complete record of experience, strategic impact, certifications, and project involvement.</p>
-  <a class="download-link" href="Manish_Resume_Full_Length.pdf" target="_blank">Explore the Full Resume/ Portfolio</a>
-</section>
+  <!-- IFRS AI Agent -->
+  <section id="agent" class="relative bg-gradient-to-r from-blue-800 to-teal-600 py-20 text-white overflow-hidden">
+    <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl font-semibold mb-2">IFRS AI Agent</h2>
+        <div class="w-20 h-1 bg-white mb-6"></div>
+        <h3 class="text-2xl font-semibold mb-4">Simplifying IFRS Complexity</h3>
+        <p class="mb-6 max-w-md">AI assistant designed to help finance professionals navigate the complexities of IFRS with instant answers, examples, updates, and context-aware responses.</p>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start"><svg class="w-6 h-6 text-yellow-400 mr-2 mt-1" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Instant IFRS Q&A</span></li>
+          <li class="flex items-start"><svg class="w-6 h-6 text-yellow-400 mr-2 mt-1" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Practical implementation guidance</span></li>
+          <li class="flex items-start"><svg class="w-6 h="6 text-yellow-400 mr-2 mt-1" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Latest IFRS updates</span></li>
+          <li class="flex items-start"><svg class="w-6 h-6 text-yellow-400 mr-2 mt-1" fill="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Context-aware responses</span></li>
+        </ul>
+        <a href="https://chatgpt.com/g/g-680492659fc881918f95d32a8333c48d-ifrs-ai-assistant-by-manish-vaishnav" target="_blank" class="inline-block px-8 py-3 bg-white text-blue-800 font-semibold rounded-lg hover:bg-gray-100 transition">Try IFRS AI</a>
+      </div>
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div class="transform -rotate-3 shadow-lg bg-white rounded-lg overflow-hidden w-full max-w-sm">
+          <img src="/images/IFRS_Image.png" alt="IFRS AI Example" class="w-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="blog" class="section">
-      <h2>Blog</h2>
-      <p><strong>Building Resilience: Key Lessons from Harvard Business Review’s Emotional Intelligence Series</strong></p>
-      <p>In this blog post, I reflect on the powerful lessons from the Harvard Business Review’s Emotional Intelligence Series, particularly focusing on the theme of resilience. It’s a topic close to my heart, both as a leader and as a lifelong learner navigating the challenges of a dynamic world.</p>
-      <p>From recognizing emotions and staying calm in adversity to building supportive networks and reframing setbacks — this post is about actionable strategies that can help professionals at all levels grow stronger, mentally and emotionally.</p>
-      <p>👉 <a href="https://www.linkedin.com/pulse/building-resilience-key-lessons-from-harvard-business-manish-vaishnav-nddzc/" target="_blank">Read the full article on LinkedIn</a></p>
-    </section>
+  <!-- Resources -->
+  <section id=resources class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold text-center mb-2">Resources</h2>
+    <div class="w-16 h-1 bg-yellow-500 mx-auto mb-8"></div>
+    <p class="text-gray-700 text-center">Coming soon: curated resources on finance, IFRS, automation, and leadership.</p>
+  </section>
 
-    <section id="ifrs" class="section">
-  <h2>IFRS AI Agent</h2>
-  <p>This AI agent was developed by me to support professionals and students with International Financial Reporting Standards (IFRS). It offers guidance on real-world applications, exam questions, journal entries, and conceptual understanding to make IFRS more accessible and practical.</p>
-  <a href="https://chatgpt.com/g/g-680492659fc881918f95d32a8333c48d-ifrs-ai-assistant-by-manish-vaishnav" target="_blank">
-    <button style="padding: 10px 20px; font-size: 16px; background-color: #4B0082; color: white; border: none; border-radius: 5px;">
-      Try the IFRS AI Assistant
-    </button>
-  </a>
-</section>
+  <!-- Contact -->
+  <section id="contact" class="container mx-auto px-4 py-16 bg-gray-50">
+    <h2 class="text-3xl font-semibold text-center mb-2">Contact</h2>
+    <div class="w-16 h-1 bg-yellow-500 mx-auto mb-8"></div>
+    <form class="max-w-xl mx-auto space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+      <input type="email" placeholder="Your Email" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+      <textarea placeholder="Your Message" rows="5" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+      <button type="submit" class="w-full py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-yellow-600 transition">Send Message</button>
+    </form>
+  </section>
 
-    <section id="resources" class="section">
-      <h2>Resources</h2>
-      <p>Valuable resources related to finance, IFRS, Automation and leadership will be available soon. Stay tuned!</p>
-    </section>
-
-    <section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>If you would like to get in touch, feel free to email me at:</p>
-  <p><a href="mailto:miv_007@yahoo.com">miv_007@yahoo.com</a></p>
-</section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Manish Vaishnav | All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-6 text-center">
+    <p>&copy; 2025 Manish Vaishnav. All Rights Reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Header background on scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.replace('bg-transparent', 'bg-white');
+      else header.classList.replace('bg-white', 'bg-transparent');
+    });
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
